@@ -1,227 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AutoPrime Motors | Veículos Premium</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-    body { background: #0a0d14; color: #e5e7eb; line-height: 1.6; }
-
-    header {
-      padding: 100px 10% 80px;
-      background: radial-gradient(circle at top left, #991b1b, #020617 60%);
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-
-    .logo {
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .logo span { color: #ef4444; }
-
-    nav a {
-      margin-left: 25px;
-      text-decoration: none;
-      color: #e5e7eb;
-      font-weight: 500;
-      font-size: .95rem;
-    }
-
-    .hero h1 {
-      font-size: 3.4rem;
-      max-width: 700px;
-    }
-
-    .hero p {
-      margin-top: 20px;
-      max-width: 600px;
-      color: #cbd5f5;
-    }
-
-    .hero a {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 16px 38px;
-      background: #ef4444;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 40px;
-      font-weight: 600;
-    }
-
-    section { padding: 90px 10%; }
-
-    h2 { font-size: 2.4rem; margin-bottom: 10px; }
-
-    .subtitle { color: #9ca3af; max-width: 600px; }
-
-    .cars {
-      margin-top: 50px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 35px;
-    }
-
-    .car {
-      background: linear-gradient(180deg, #020617, #020617);
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 30px 60px rgba(0,0,0,.45);
-      transition: transform .35s;
-    }
-
-    .car:hover { transform: translateY(-12px); }
-
-    .car img { width: 100%; height: 200px; object-fit: cover; }
-
-    .car-info { padding: 28px; }
-
-    .car-info h3 { font-size: 1.15rem; margin-bottom: 6px; }
-
-    .car-info p { font-size: .9rem; color: #9ca3af; }
-
-    .price { margin-top: 12px; font-size: 1.4rem; font-weight: 700; color: #ef4444; }
-
-    .btn {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 12px 30px;
-      background: transparent;
-      border: 1px solid #ef4444;
-      color: #ef4444;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .btn:hover { background: #ef4444; color: #fff; }
-
-    .benefits {
-      margin-top: 50px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 35px;
-    }
-
-    .benefit {
-      background: #020617;
-      padding: 40px;
-      border-radius: 24px;
-    }
-
-    .benefit h3 { margin-bottom: 10px; color: #ef4444; }
-
-    .cta {
-      background: radial-gradient(circle at bottom right, #7f1d1d, #020617 65%);
-      text-align: center;
-    }
-
-    .cta h2 { font-size: 2.6rem; }
-
-    footer {
-      padding: 50px;
-      text-align: center;
-      background: #020617;
-      color: #6b7280;
-      font-size: .9rem;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoPrime Motors</title>
+  <link rel="stylesheet" href="STYLE.CSS">
 </head>
+
 <body>
 
-<header>
+<header class="hero">
+  <div class="overlay"></div>
+
   <div class="topbar">
     <div class="logo">AutoPrime <span>Motors</span></div>
-    <nav>
-      <a href="#estoque">Estoque</a>
-      <a href="#vantagens">Diferenciais</a>
-      <a href="#contato">Contato</a>
-    </nav>
   </div>
 
-  <div class="hero">
-    <h1>Veículos selecionados para quem exige mais</h1>
-    <p>Concessionária fictícia criada para portfólio, focada em carros premium, atendimento diferenciado e experiência digital moderna.</p>
-    <a href="#estoque">Ver veículos</a>
+  <div class="hero-content">
+    <h1>Veículos premium para quem exige mais</h1>
+    <p>Experiência automotiva de alto padrão, design moderno e atendimento exclusivo.</p>
+   
   </div>
+  
 </header>
 
-<section id="estoque">
+<section class="estoque">
   <h2>Estoque em Destaque</h2>
-  <p class="subtitle">Modelos revisados, com procedência e prontos para transferência.</p>
 
-  <div class="cars">
-    <div class="car">
-      <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068" alt="BMW X1">
-      <div class="car-info">
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-image" style="background-image:url('CARROS/BMW.jpg')"></div>
+      <div class="card-body">
         <h3>BMW X1 2022</h3>
         <p>Automático • Flex • 28.000 km</p>
-        <div class="price">R$ 189.900</div>
-        <a href="#" class="btn">Consultar</a>
+        <span class="price">R$ 189.900</span>
       </div>
     </div>
 
-    <div class="car">
-      <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068" alt="Audi A3">
-      <div class="car-info">
+    <div class="card">
+      <div class="card-image" style="background-image:url('CARROS/AUDI.webp')"></div>
+      <div class="card-body">
         <h3>Audi A3 Sedan</h3>
         <p>Automático • Gasolina • 35.000 km</p>
-        <div class="price">R$ 159.900</div>
-        <a href="#" class="btn">Consultar</a>
+        <span class="price">R$ 159.900</span>
       </div>
     </div>
 
-    <div class="car">
-      <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c8" alt="Jeep Compass">
-      <div class="car-info">
+    <div class="card">
+      <div class="card-image" style="background-image:url('CARROS/JEEP.webp')"></div>
+      <div class="card-body">
         <h3>Jeep Compass</h3>
         <p>Automático • Diesel • 42.000 km</p>
-        <div class="price">R$ 147.500</div>
-        <a href="#" class="btn">Consultar</a>
+        <span class="price">R$ 147.500</span>
       </div>
     </div>
+
   </div>
-</section>
-
-<section id="vantagens">
-  <h2>Nossos Diferenciais</h2>
-  <p class="subtitle">Uma experiência de compra segura, simples e transparente.</p>
-
-  <div class="benefits">
-    <div class="benefit">
-      <h3>Inspeção Completa</h3>
-      <p>Todos os veículos passam por avaliação técnica rigorosa antes da venda.</p>
-    </div>
-    <div class="benefit">
-      <h3>Documentação Garantida</h3>
-      <p>Processo de transferência ágil, sem surpresas ou pendências.</p>
-    </div>
-    <div class="benefit">
-      <h3>Financiamento Facilitado</h3>
-      <p>Parcerias com bancos para condições competitivas e aprovação rápida.</p>
-    </div>
-  </div>
-</section>
-
-<section class="cta" id="contato">
-  <h2>Seu próximo carro começa aqui</h2>
-  <p class="subtitle" style="margin:20px auto;">Entre em contato e agende uma visita sem compromisso.</p>
-  <a href="https://instagram.com" class="btn">Falar com consultor</a>
 </section>
 
 <footer>
-  <p>© 2025 • Projeto demonstrativo para portfólio • Henrique Alves</p>
+  © 2025 • Projeto fictício para portfólio • Henrique Alves
 </footer>
+<a class="whatsapp-float" href="https://wa.me/5599999999999" target="_blank">
+  <span>Falar no WhatsApp</span>
+</a>
+
 
 </body>
 </html>
+
+
